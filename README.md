@@ -1,1 +1,1 @@
-# bycicle-template
+# bicycle-template
