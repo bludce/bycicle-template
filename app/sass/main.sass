@@ -2,7 +2,7 @@
 @import "fonts.sass"
 @import "mixin.sass"
 @import "sprite.sass"
-
+@include scrollbars(.5em, $main-color)
 html
 	box-sizing: border-box
 
@@ -13,12 +13,213 @@ body
 *, *:before, *:after 
 	box-sizing: inherit
 
-%container 
-	width: 940px
-	margin: 0 auto
+/*==========header============*/
+
+.header
+	background-color: $second-bg-color
+	background-image:  url(../img/haeder-bg.jpg)
+	background-attachment: fixed
+	background-size: cover
+	background-repeat: no-repeat;
+	background-position: center center
+	&__container
+		@extend %container
+		height: 100vh
+		width: 100%
+
+.nav
+	&__list
+		display: flex
+		justify-content: center
+		align-items: center
+		padding-top: 35px
+	&__item
+		+menu-font
+	&__link
+		position: relative
+		text-decoration: none
+		color: $menu-color
+		letter-spacing: 0.15em
+		padding: 0 35px
+		&:not(:last-child):after
+			content: '.'
+			position: absolute
+			right: -5px
+
+.logo
+	&__image
+		padding: 0 35px
 
 
 
+/*=========about==========*/
+.about
+	&_bg
+		background-color: $bg-color
+	&__container
+		@extend %container
+
+	&__content
+		padding: 145px 0
+		
+
+.about-content
+	&__icon
+		@include sprite($-icon1)
+		margin: 0 auto
+	&__title
+		margin: 0
+		padding: 30px 0
+		+headers-font
+	&__text
+		+section-font
+		text-align: center
+
+
+/*============work============*/
+.work-first
+	display: grid
+	grid-template-columns: 2fr 1fr
+	grid-template-rows: 1fr 200px
+	&__item
+		display: flex
+		justify-content: center
+		align-items: center
+		&_bg
+			background-image: url(../img/Layer-10.jpg)
+			background-size: cover
+			background-repeat: no-repeat
+			background-position: center center
+			grid-column: 1 / 2
+			grid-row: span 2;
+		&_bg2
+			background-image: url(../img/Layer-11.jpg)
+			background-size: cover
+			background-repeat: no-repeat
+			background-position: center center
+	&__icon
+		@include sprite($icon3)
+
+.work-second
+	display: grid	
+	grid-template-columns: 1fr 2fr
+	&__item
+		display: flex
+		justify-content: center
+		align-items: center
+		&_bg
+			background-image: url(../img/Layer-12.jpg)
+			background-size: cover
+			background-repeat: no-repeat
+			background-position: center center
+			grid-column: 2
+			grid-row: span 3
+		&_bg2
+			background-image: url(../img/Layer-13.jpg)
+			background-size: cover
+			background-repeat: no-repeat
+			background-position: center center
+			height: 200px
+	&__icon
+		@include sprite($icon5)
+
+.work-third
+	display: grid
+	grid-template-columns: 1fr 1fr 1fr
+	grid-template-rows: 1fr 200px
+	&__item
+		display: flex
+		justify-content: center
+		align-items: center
+		&_bg
+			background-image: url(../img/Layer-15.jpg)
+			background-size: cover
+			background-repeat: no-repeat
+			background-position: center center
+			grid-row: span 2
+		&_bg2
+			background-image: url(../img/Layer-14.jpg)
+			background-size: cover
+			background-repeat: no-repeat
+			background-position: center center
+			grid-row: span 2
+		&_bg3
+			background-image: url(../img/Layer-16.jpg)
+			background-size: cover
+			background-repeat: no-repeat
+			background-position: center center
+	&__icon
+		@include sprite($icon6)
+
+.work-content
+	&__content
+		position: relative
+		padding: 70px 65px 55px 65px
+		&:after
+			content: ''
+			position: absolute
+			bottom: -10px
+			right: 50%
+			width: 20px
+			height: 20px
+			background-color: #fff
+			transform: translatex(10px) rotate(45deg) 
+			transform: 
+	&__icon
+		margin: 0 auto
+		&_bike1
+			@include sprite($-icon2)
+		&_bike2
+			@include sprite($icon4)
+		&_bike3
+			@include sprite($icon7)
+		
+	&__title
+		+headers-font
+		margin: 0
+		padding: 25px 0
+	&__text
+		+section-font
+	&__border
+		display: block
+		margin: 0 auto
+		width: 50px
+		height: 2px
+		padding-top: 40px
+		border-bottom: 2px solid $text-color
+
+/*=====reviews=====*/
+.reviews
+	&__container
+		@extend %container
+	&__content
+		padding: 120px 0 70px 0
+	&_bg
+		background-color: $bg-color
+
+.reviews-content
+	&__icon
+		@include sprite($tw)
+		margin: 0 auto
+	&__title
+		font-family: 'MyriadPro-Regular'
+		font-size: 22px
+		line-height: 42px
+		letter-spacing: 3px
+		color: $title-color
+		text-align: center
+		margin: 0
+		padding: 35px 0 25px 0
+		&_time
+			color: $text-color
+			font-size: 16px
+			font-family: 'Roboto-light'
+	&__text
+		font-family: 'Roboto-italic'
+		font-size: 22px
+		line-height: 42px
+		color: $text-color
+		text-align: center
 
 //ALWAYS END
 @import "media.sass"
