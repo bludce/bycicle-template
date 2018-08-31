@@ -74,6 +74,7 @@ body
 	&__text
 		+section-font
 		text-align: center
+		margin: 0
 
 
 /*============work============*/
@@ -87,16 +88,12 @@ body
 		align-items: center
 		&_bg
 			background-image: url(../img/Layer-10.jpg)
-			background-size: cover
-			background-repeat: no-repeat
-			background-position: center center
+			+bg-image-cover
 			grid-column: 1 / 2
 			grid-row: span 2;
 		&_bg2
 			background-image: url(../img/Layer-11.jpg)
-			background-size: cover
-			background-repeat: no-repeat
-			background-position: center center
+			+bg-image-cover
 	&__icon
 		@include sprite($icon3)
 
@@ -109,16 +106,12 @@ body
 		align-items: center
 		&_bg
 			background-image: url(../img/Layer-12.jpg)
-			background-size: cover
-			background-repeat: no-repeat
-			background-position: center center
+			+bg-image-cover
 			grid-column: 2
 			grid-row: span 3
 		&_bg2
 			background-image: url(../img/Layer-13.jpg)
-			background-size: cover
-			background-repeat: no-repeat
-			background-position: center center
+			+bg-image-cover
 			height: 200px
 	&__icon
 		@include sprite($icon5)
@@ -133,21 +126,15 @@ body
 		align-items: center
 		&_bg
 			background-image: url(../img/Layer-15.jpg)
-			background-size: cover
-			background-repeat: no-repeat
-			background-position: center center
+			+bg-image-cover
 			grid-row: span 2
 		&_bg2
 			background-image: url(../img/Layer-14.jpg)
-			background-size: cover
-			background-repeat: no-repeat
-			background-position: center center
+			+bg-image-cover
 			grid-row: span 2
 		&_bg3
 			background-image: url(../img/Layer-16.jpg)
-			background-size: cover
-			background-repeat: no-repeat
-			background-position: center center
+			+bg-image-cover
 	&__icon
 		@include sprite($icon6)
 
@@ -180,6 +167,7 @@ body
 		padding: 25px 0
 	&__text
 		+section-font
+		margin: 0
 	&__border
 		display: block
 		margin: 0 auto
@@ -220,6 +208,144 @@ body
 		line-height: 42px
 		color: $text-color
 		text-align: center
+		padding-bottom: 100px
+		margin: 0
 
+.dotted
+	text-align: center
+	&__link
+		display: inline-block
+		width: 10px
+		height: 10px
+		border-radius: 50%
+		border: 1px solid $text-color
+		margin: 0 2px
+		&_active
+			background-color: $text-color
+
+
+/*====shop====*/
+.shop-grid
+	display: grid
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+	grid-template-rows: 265px 265px 
+	&__item
+		position: relative
+		overflow: hidden
+		&_img1
+			background-image: url(../img/shop1.jpg)
+			+bg-image-cover
+		&_img2
+			background-image: url(../img/shop2.jpg)
+			+bg-image-cover
+		&_img3
+			background-image: url(../img/shop3.jpg)
+			+bg-image-cover
+			grid-column: span 2
+			grid-row: 2
+		&_img4
+			background-image: url(../img/shop4.jpg)
+			+bg-image-cover
+			grid-row: span 2
+		&_img5
+			background-image: url(../img/shop5.jpg)
+			+bg-image-cover
+			grid-row: span 2
+		&_img6
+			background-image: url(../img/shop6.jpg)
+			+bg-image-cover
+		&_img7
+			background-image: url(../img/shop7.jpg)
+			+bg-image-cover
+		&_img8
+			background-image: url(../img/shop8.jpg)
+			grid-row: 1
+			grid-column: 5/span 2
+
+.overlay
+	background-color: $overlay-color
+	position: absolute
+	top: 0
+	left: 0
+	height: 100%
+	width: 100%
+	transition: 0.5s ease-in
+	opacity: 0
+	&__content
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+	&__icon
+		@include sprite($icon8)
+		margin: auto
+		margin-bottom: 10px
+	&__text
+		font-family: 'Roboto-bold'
+		text-transform: uppercase
+		font-size: 18px
+		letter-spacing: 3px
+		color: #fff
+	&:hover
+		opacity: 1
+		transition: 0.5s ease-in
+
+
+.shop-button
+	background-color: #282f35
+	display: flex
+	justify-content: center
+	align-items: center
+	&__link
+		display: inline-block
+		color: #fff
+		+btn
+		&:hover
+			background-color: $main-color
+			border-color: transparent
+	&_padding
+		padding: 75px 0
+
+
+/*subscription*/
+.subs
+	display: flex
+	justify-content: center
+	align-items: center
+	&__content
+		padding: 110px 0
+	&__logo
+		@include sprite($-logo)
+		margin: auto
+	&__title
+		padding-top: 30px
+		padding-bottom: 40px
+		font-size: 24px
+		font-family: "Roboto-italic", sans-serif
+		color: $text-color
+		text-align: center
+
+.subs-form
+	display: flex
+	align-items: center
+	&__email
+		padding: 30px
+		font-family: "Roboto-italic", sans-serif
+		font-size: 20px
+		border: 1px solid #c8c8c8
+		color: #c8c8c8
+		width: 400px
+	&__btn
+		box-sizing: border-box
+		text-transform: uppercase
+		font-size: 32px
+		font-family: "Roboto-light"
+		letter-spacing: 2px;
+		color: #fff
+		background-color: $main-color
+		border: none
+		padding: 24px 45px
+		margin-left: 10px
+		
 //ALWAYS END
 @import "media.sass"
