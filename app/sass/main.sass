@@ -334,7 +334,7 @@ body
 		font-size: 20px
 		border: 1px solid #c8c8c8
 		color: #c8c8c8
-		width: 400px
+		width: 450px
 	&__btn
 		box-sizing: border-box
 		text-transform: uppercase
@@ -344,8 +344,59 @@ body
 		color: #fff
 		background-color: $main-color
 		border: none
-		padding: 24px 45px
+		padding: 24px 55px
 		margin-left: 10px
+
+/*====footer====*/
+.footer
+	&_bg
+		background-color: $bg-color
+	&__container
+		@extend %container
+	&__content
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr
+		padding: 85px 0
+
+.address
+	color: $text-color
+	font-family: "Roboto-italic"
+	&__city
+		font-family: "Roboto-bold"
+		font-size: 18px
+		font-style: normal
+		margin: 0
+	&__street
+		font-size: 16px
+		margin: 0
+	&__index
+		font-size: 16px
+		margin: 0
+
+.social
+	display: flex
+	justify-content: center
+	align-items: center
+	&__link
+		display: inline-block
+		margin: 0 5px
+		&_tw
+			@include sprite($tweeter)
+		&_fb
+			@include sprite($fb)
+		&_pt
+			@include sprite($pinterest)
+
+.handcrafted
+	display: flex
+	align-items: center
+	justify-content: flex-end
+	&__text
+		font-family: "Roboto-italic"
+		font-size: 20px
+		color: $text-color
+	&__image
+		padding-left: 10px
 		
 //ALWAYS END
 @import "media.sass"
