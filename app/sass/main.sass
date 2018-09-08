@@ -6,9 +6,6 @@
 html
 	box-sizing: border-box
 
-body 
-	margin: 0
-	padding: 0
 	
 *, *:before, *:after 
 	box-sizing: inherit
@@ -82,18 +79,22 @@ body
 	display: grid
 	grid-template-columns: 2fr 1fr
 	grid-template-rows: 1fr 200px
+
 	&__item
 		display: flex
 		justify-content: center
 		align-items: center
+
 		&_bg
 			background-image: url(../img/Layer-10.jpg)
 			+bg-image-cover
 			grid-column: 1 / 2
 			grid-row: span 2;
+
 		&_bg2
 			background-image: url(../img/Layer-11.jpg)
 			+bg-image-cover
+				
 	&__icon
 		@include sprite($icon3)
 
@@ -135,6 +136,7 @@ body
 		&_bg3
 			background-image: url(../img/Layer-16.jpg)
 			+bg-image-cover
+
 	&__icon
 		@include sprite($icon6)
 
@@ -286,6 +288,7 @@ body
 		font-size: 18px
 		letter-spacing: 3px
 		color: #fff
+		text-align: center
 	&:hover
 		opacity: 1
 		transition: 0.5s ease-in

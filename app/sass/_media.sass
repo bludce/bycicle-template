@@ -3,16 +3,186 @@
 /* Large Devices, Wide Screens 1200*/
 @media screen and (max-width: 1200px)
 	%container 
-    	width: 940px
+		width: 940px
+	.work-first
+		grid-template-columns: 1fr 1fr
+	.work-second
+		grid-template-columns: 1fr 1fr
+	.work-third
+		grid-template-columns: 1fr 1fr
+		grid-template-rows: 1fr 200px 200px
+	.reviews-content
+		&__text
+			font-size: 18px
+			line-height: 36px
 
 /* Medium Devices, Desktops  992*/
 @media screen and (max-width: 992px)
-	%container 
-    	width: 720px
+	%container
+		width: 800px
+	.shop-grid
+		grid-template-rows: 170px 170px 
+
 
 /* Small Devices, Tablets 768*/
 @media screen and (max-width: 768px)
 	%container
-		width: 90%	
+		width: 90%
+
+	.nav
+		&__item
+			display: none
+
+	.about
+		&__content
+			padding: 80px 0
+
+	.work-content
+		&__content
+			padding: 30px 40px
+		&__border
+			padding-top: 20px
+
+	.reviews
+		&__content
+			padding: 50px 0
+
+	.reviews-content
+		&__title
+			padding: 20px 0 10px 0
+			font-size: 20px
+			line-height: 40px
+		&__text
+			padding-bottom: 30px
+			font-size: 16px
+			line-height: 32px
+	
+	.shop-grid
+		grid-template-columns: 1fr 1fr 1fr
+		grid-template-rows: repeat(3, 170px)
+		&__item
+			&_img3
+				grid-column: auto
+				grid-row: auto
+			&_img4
+				grid-row: span 2
+			&_img5
+				grid-row: auto
+			&_img8
+				grid-row: auto
+				grid-column: auto
+
+	.overlay
+		&__text
+			font-size: 14px
+			letter-spacing: 1px
+
+	.subs
+		&__content
+			padding: 50px 0
+		&__title
+			font-size: 20px
+			padding-bottom: 25px
+
+	.subs-form
+		&__email
+			width: 100%
+			padding: 15px
+			font-size: 16px
+		&__btn
+			font-size: 20px
+			padding: 14px 30px
+
+	.footer
+		&__content
+			padding: 35px 0
+
+	.address
+		&__city
+			font-size: 16px
+		&__street
+			font-size: 14px
+		&__index
+			font-size: 14px
+
+	.handcrafted
+		&__text
+			font-size: 16px
 
 /* Medium Devices, Desktops 480*/
+@media screen and (max-width: 480px)
+	.nav
+		&__list
+			justify-content: space-between
+	.logo
+		width: 50px
+		&__image
+			padding: 0
+			width: 100%
+	.about
+		&__content
+			padding: 60px 0
+
+	.work-content
+		&__content
+			padding: 60px 40px
+
+	.work-first
+		grid-template-columns: 1fr
+		grid-template-rows: 1fr 1fr 200px
+		&__item
+			&_bg
+				grid-column: auto
+				grid-row: auto
+
+	.work-second
+		grid-template-columns: 1fr
+		grid-template-rows: 1fr 1fr 200px
+		&__item
+			&_bg
+				grid-column: auto
+				grid-row: auto
+
+	.work-third
+		grid-template-rows: 1fr 1fr 200px
+		&__item
+			&_bg
+				grid-column: span 2
+				grid-row: auto
+			&_bg2
+				grid-row: span 2
+			&_bg4
+				grid-column: span 2
+	
+	.shop-grid
+		grid-template-columns: 1fr 1fr
+		grid-template-rows: repeat(4, 200px)
+		&__item
+			&_img4
+				grid-row: auto
+
+	.shop-button
+		&_padding
+			padding: 35px 0
+		&__link
+			letter-spacing: 2px
+			font-size: 14px
+			padding: 15px 40px
+
+	.footer
+		&__content
+			grid-template-columns: 1fr 1fr
+			padding-bottom: 10px
+
+	.social
+		justify-content: flex-end
+
+	.handcrafted
+		grid-column: span 2
+		justify-content: center
+
+/* Small Devices, Desktops 320*/
+@media screen and (max-width: 320px)
+	.subs
+		&__content
+			width: 90%
