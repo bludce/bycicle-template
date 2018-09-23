@@ -36,6 +36,7 @@ gulp.task('sass', function(){
 gulp.task('scripts', function() {
     return gulp.src([ 
         'bower_components/jquery/dist/jquery.min.js', 
+        'bower_components/owl.carousel/dist/owl.carousel.min.js', 
         ])
         .pipe(gulp.dest('app/js')); 
 });
